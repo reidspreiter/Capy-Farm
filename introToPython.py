@@ -125,7 +125,7 @@ print(a[::2])
 # Also works on arrays
 
 a = "abcdefghijklmnopqrstuvwxyz"
-a = a.split("")
+a = list(a)
 print(a)
 print(a[0])
 print(a[-1])
