@@ -139,7 +139,7 @@ print(a[::2])
 # Functions
 
 def create(start, end, step):
-	return [range(start, end, step)]
+	return list(range(start, end, step))
 	
 start, end, step = 0, 20, 2
 line = create(start, end, step)
@@ -165,11 +165,12 @@ calories["Pea"] = 1
 print(calories)
 print(calories["Water"])
 
-# returns None if key not found. Generally safer
-calories.get("Shoe") 
+# The below line of code is evil
+print(calories["Shoe"])
+# Use .get(). It returns None if key not found. Much safer.
+print(calories.get("Shoe"))
 # can also set default return value
-calories.get("Shoe"["OOPSIE"])
-print(calories)
+print(calories.get("Shoe", "Oopsie"))
 
 
 
